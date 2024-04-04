@@ -15,10 +15,10 @@ public class LaserGun : MonoBehaviour
 
         if(Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hit, 800f))
         {
-            var obj = hit.transform.GetComponent<AsteroidExplode>();
+            var obj = hit.transform.GetComponent<IRaycastInterface>();
             if(obj!=null)
             {
-                obj.AsteroidHit();
+                obj.Interact();
             }
         }        
     }
