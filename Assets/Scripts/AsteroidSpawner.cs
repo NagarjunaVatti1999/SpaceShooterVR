@@ -38,6 +38,6 @@ public class AsteroidSpawner : MonoBehaviour
                                 UnityEngine.Random.Range(-spawnArea.y/2, spawnArea.y/2),
                                 UnityEngine.Random.Range(-spawnArea.z/2, spawnArea.z/2));
         
-        Instantiate(asteroid, pos, transform.rotation, transform.parent);
+        Instantiate(asteroid, pos, transform.rotation, this.transform);
     }
 }
