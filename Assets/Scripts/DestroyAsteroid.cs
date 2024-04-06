@@ -8,7 +8,8 @@ public class DestroyAsteroid : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.GetComponent<AsteroidMovement>()!=null)
         {
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Animator>().SetTrigger("FadeOut");
+            Destroy(other.gameObject, 3f);
         }
     }
 }
